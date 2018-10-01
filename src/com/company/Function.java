@@ -8,10 +8,10 @@ import javax.swing.*;
  */
 public class Function {
 
-    public boolean check(Double input) {
+    public boolean check(String input) {
 
         try {
-            double x = input;
+            double x = Double.parseDouble(input);
             if (x >= 0 || x < 0) ;
             return true;
         } catch (NumberFormatException e) {
@@ -20,17 +20,17 @@ public class Function {
         }
     }
 
-    public void plnToDollar(double input) {
+    public void plnToDollar(double Minput) {
 
-        double pln = input * 3.6;
-        JOptionPane.showMessageDialog(null, "Wartośc po dzisiejszym kursie: " + pln + " PLN.");
+        double pln = Minput * 3.6;
+        JOptionPane.showMessageDialog(null, "Wartość po dzisiejszym kursie: " + pln + " PLN.");
 
     }
 
-    public void euroToDollar(double input) {
+    public void euroToDollar(double Minput) {
 
-        double euro = input * 1.1606;
-        JOptionPane.showMessageDialog(null, "Wartośc po dzisiejszym kursie: " + euro + " euro.");
+        double euro = Minput * 1.1606;
+        JOptionPane.showMessageDialog(null, "Wartość po dzisiejszym kursie: " + euro + " euro.");
 
     }
 }
